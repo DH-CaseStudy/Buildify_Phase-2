@@ -27,13 +27,14 @@
 
 | 영역 | 사용 기술 |
 |------|-----------|
-| Language | Java 17 |
+| Language | Java 17, HTML, CSS3 |
 | Framework | Spring , MyBatis |
 | DB | MySQL |
+| Infra | AWS(RDS) |
+| Security | Spring Security |
 | View | JSP |
-| Cache | Spring Singleton |
 | Build Tool | Gradle |
-| 기타 | Lombok , Spring Security |
+| 기타 | Lombok , Log4j2 |
 <br>
 
 
