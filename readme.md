@@ -1,4 +1,4 @@
-# WareFlow - 📦 BuildiFy - WMS 시스템 (2차 프로젝트)
+# 📦 BuildiFy - WMS 시스템 (2차 프로젝트)
 
 <br>
 
