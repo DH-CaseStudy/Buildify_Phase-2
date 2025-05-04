@@ -119,7 +119,7 @@ src/main/webapp
 
 ## 프로젝트 실행 가이드
  1. **환경 준비**  
-   - Gradle 설치 (wrapper 사용 시 별도 설치 불필요)  
+   - IntelliJ, Java (17), MySQL, Gradle, Tomcat  
 
 2. **DB 설정**  
    - `src/main/resources/application-secret.properties` 에서 DB 접속 정보 설정
@@ -157,9 +157,9 @@ src/main/webapp
 
 2. 입고 관리 (Inbound)  
 	•	입고 요청 등록·조회·수정  
-	•	관리자 승인·반려 처리  
+	•	관리자 승인 처리  
 	•	Excel 리포트 자동 생성
-	•	재고 및 입고 이력 실시간 업데이트  
+	•	입고 이력 실시간 업데이트  
    
 4. 출고 관리 (Outbound)  
 	•	출고 요청 등록·조회·수정·삭제  
@@ -177,15 +177,17 @@ src/main/webapp
 	•	계약별 고객 정보 관리  
 
 8. 대시보드  
-	•	관리자용 홈 화면  
+	•	모든 사용자의 입고와 출고, 모든 지역별 창고의 사용 현황을 확인할 수 있는 관리자용 홈 화면
+	•	사용자 개인의 입고와 출고, 창고 사용 현황을 모니터링 할 수 있는 유저용 홈 화면
 	•	JavaScript 기반 차트(JSP+Chart.js)로 시각화  
-	•	5분 단위 자동 리프레시  
 
-9. 공통  
-	•	글로벌 예외 처리(@ControllerAdvice) 및 커스텀 에러 페이지  
-	•	Spring Singleton 캐시 활용  
+10. 공통  
+	•	공통 예외처리를 통한 커스텀 에러 페이지 리다이렉트
+	•	인증되지 않은 사용자의 특정 URL 접근 시 로그인 페이지 리다이렉트
+    	•	각 도메인 별 UUID 생성 보장
 
-10. 보안·성능  
+
+12. 보안·성능  
 	•	MyBatis 성능 튜닝(동적 SQL, 페이징)   
 	•	트랜잭션 관리 및 롤백 보장(@Transactional)  
 
@@ -194,9 +196,6 @@ src/main/webapp
 
 ## Trouble-Shooting
 
-![image](https://github.com/user-attachments/assets/ce766504-1f4f-4b5d-894e-063662846631)
-- Spring Security 인증 객체 문제 -> 객체 생성 통해 해결
-- AJAX 비동기 처리 -> AJAX기반 카테고리 조회 실패, @ResponseBody 사용해 JSON 데이터를 반환하여 해결
 
 ---
 
