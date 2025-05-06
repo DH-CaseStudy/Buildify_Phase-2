@@ -298,6 +298,28 @@ src/main/webapp
 
 ---
 
+## ✅ 테스트 결과
+
+![image](https://github.com/user-attachments/assets/52f7c357-ee50-4bca-b346-b0be857afa23)
+
+
+전체 **55개 테스트 클래스**, **0건의 실패 없이 100% 성공률**을 기록했습니다.  
+모든 Mapper, Service 계층 단위 테스트를 통과하며, 핵심 기능의 신뢰성과 안정성을 확보했습니다.
+
+- **총 테스트 수**: 55개  
+- **실패/무시된 테스트**: 0건  
+- **총 실행 시간**: 약 14.677초  
+- **성공률**: 💯 100% 성공
+
+주요 테스트 항목:
+- `AuthMapperTests`, `InboundMapperTests`, `InventoryMapperTests` 등 Mapper 단위 테스트
+- `ProductServiceTests`, `GetProductListTests`, `InsertProductTests` 등 서비스 계층 기능 검증
+- 사용자 인증 관련 `CustomUserDetailsServiceTests`, `AuthServiceTests` 수행
+- `categoryListTests` 등 카테고리 조회 로직 검증
+
+> 테스트는 **Gradle 8.1.3** 기준으로 수행되었으며, 테스트 클래스 별 실행 시간과 성공률은 IntelliJ 기반 HTML 리포트를 통해 산출하였습니다.
+
+
 ## 🧾 커밋, PR, 이슈 컨벤션
 <br>
 
