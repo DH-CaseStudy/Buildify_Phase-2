@@ -101,7 +101,7 @@ src/main/webapp
 │   │   │      │      ├── outbound/
 │   │   │      │      ├── ...                
 │   │   ├── users/                    # 유저 페이지
-│   │   │      ├── layouts/           # header/footer/sidebar 등 관리자 레이아웃
+│   │   │      ├── layouts/           # header/footer/sidebar 등 유저 레이아웃
 │   │   │      ├── pages/             # 유저 구현 페이지 모음
 │   │   │      │      ├── inbound/
 │   │   │      │      ├── outbound/
@@ -197,12 +197,26 @@ src/main/webapp
 ## 🔨 내가 담당하고 구현한 기능
 
 ### 1. 📝 사용자 회원가입
-- ㅇㅇㅇ
+- 회원가입 페이지에서 ID 중복 확인 기능 구현
+- 각 인풋필드에 정규식을 적용하여 유저의 실수 입력 방지
+- 회원가입시 유저의 비밀번호를 스프링 시큐리티에서 제공하는 BCrypt 해싱 함수를 사용하여 단방향 암호화 후 데이터베이스에 저장
+- 회원가입시 user와 admin을 구분하기 위하여 auth테이블에 id와 role을 인서트
+- 카카오 주소 api를 이용한 주소찾기 기능
+
 ### 2. 🔐 사용자 로그인
+- Spring Security를 활용하여 사용자 인증(Authentication) 및 인가(Authorization) 기능 구현
+- 일반 사용자(User)와 관리자(Admin) 권한을 구분하여 역할 기반 접근 제어(Role-Based Access Control)를 적용
+- 로그인 요청 시 사용자 정보를 커스터마이징한 `UserDetailsService`를 통해 조회하고, 비밀번호는 Spring Security 내부에서 `BCryptPasswordEncoder.matches()`로 검증되도록 구성
+- auth 테이블에서 사용자 ID와 역할 정보를 먼저 조회한 뒤, role 값에 따라 user 또는 admin 테이블에서 추가 인증 정보를 불러오는 구조로 설계
+  
 ### 3. 사용자 창고 등록
+
 ### 4. 등록된 창고 조회
+
 ### 4. 📦 사용자 상품 등록
+
 ### 6. 🔍 등록된 상품 조회
+
 ### 7. 🔍 유저 대시보드 화면
 
 ---
