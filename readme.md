@@ -2,7 +2,7 @@
 
 ## 프로젝트 개요
 
-2차 프로젝트는 1차 프로젝트(콘솔 기반 WMS)를 웹 기반 시스템으로 전환한 확장 프로젝트입니다. 주요 구현 내용은 다음과 같습니다:
+2차 프로젝트는 1차 프로젝트(https://github.com/DH-CaseStudy/Buildify_Phase-1)를 웹 기반 시스템으로 전환한 확장 프로젝트입니다. 주요 구현 내용은 다음과 같습니다:
 
 - **웹 기술 적용**: HTML, CSS, Bootstrap, JSP, MyBatis, Spring Framework 기반 SSR 구현
 - **UI/UX 개선**: 사용자가 입고·출고·재고 관리를 직관적으로 할 수 있도록 웹 UI 제공
